@@ -1,0 +1,33 @@
+{
+  "name": "steam-review-quiz-game",
+  "version": "1.0.0",
+  "description": "A MERN stack game where users guess games from Steam reviews",
+  "main": "server/server.js",
+  "scripts": {
+    "client": "cd client && npm run dev",
+    "server": "cd server && npm run dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "install-all": "npm install && cd client && npm install && cd ../server && npm install",
+    "build": "cd client && npm install && npm run build",
+    "start": "cd server && npm install && npm start",
+    "railway:build": "npm run build",
+    "railway:start": "cd server && npm start"
+  },
+  "keywords": [
+    "steam",
+    "game",
+    "quiz",
+    "mern",
+    "react",
+    "mongodb"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

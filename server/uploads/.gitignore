@@ -1,0 +1,7 @@
+# Ignore all uploaded files
+reviews/*
+
+# But keep the directory structure
+!reviews/.gitkeep
+!.gitignore
+

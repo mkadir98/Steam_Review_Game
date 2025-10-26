@@ -1,0 +1,128 @@
+[
+  {
+    "reviewTexts": [
+      "I've spent over 300 hours building my factory and I still haven't launched a rocket. The factory must grow. Send help... actually no, don't. I need to optimize my green circuit production first.",
+      "Started playing at 8 PM, looked at the clock and it's 6 AM. My factory needs me. My family doesn't understand. The conveyor belts call to me.",
+      "This game is basically Excel with graphics. I have spreadsheets for my spreadsheets. 10/10 would automate again."
+    ],
+    "gameName": "Factorio",
+    "genre": "Strategy Simulation",
+    "language": "en",
+    "difficulty": "medium",
+    "isActive": true
+  },
+  {
+    "reviewText": "My crops are watered, my chickens are fed, and I've given my wife her favorite gift. Why can't real life be this simple? Also, I married a purple-haired girl who eats gems. 10/10 would farm again.",
+    "gameName": "Stardew Valley",
+    "genre": "Farming Simulation",
+    "language": "en",
+    "difficulty": "easy",
+    "isActive": true
+  },
+  {
+    "reviewText": "I came for the card game, stayed for the existential crisis about whether the innkeeper is real. Also, there's a really good card game. Did I mention the card game?",
+    "gameName": "The Witcher 3: Wild Hunt",
+    "genre": "Action RPG",
+    "language": "en",
+    "difficulty": "easy",
+    "isActive": true
+  },
+  {
+    "reviewText": "Finally, a game where I can be a goat and ruin everyone's day. Jumped on cars, headbutted people, got stuck in a fence. 11/10 for physics.",
+    "gameName": "Goat Simulator",
+    "genre": "Simulation",
+    "language": "en",
+    "difficulty": "easy",
+    "isActive": true
+  },
+  {
+    "reviewText": "Died to the first boss 47 times. Finally beat it. Felt like a god. Died to a regular enemy 2 minutes later. This game hates me and I love it.",
+    "gameName": "Dark Souls",
+    "genre": "Action RPG",
+    "language": "en",
+    "difficulty": "medium",
+    "isActive": true
+  },
+  {
+    "reviewText": "I built a house, it exploded. I built another house, a green thing blew it up. I built a third house underground, and I'm never coming out. At least I have diamonds now.",
+    "gameName": "Minecraft",
+    "genre": "Sandbox",
+    "language": "en",
+    "difficulty": "easy",
+    "isActive": true
+  },
+  {
+    "reviewText": "Started a new playthrough as a stealth archer. Swore I'd be a mage this time. Somehow I'm a stealth archer again. How does this keep happening?",
+    "gameName": "The Elder Scrolls V: Skyrim",
+    "genre": "Action RPG",
+    "language": "en",
+    "difficulty": "easy",
+    "isActive": true
+  },
+  {
+    "reviewText": "I tried to be good. I really did. But that chicken looked at me funny and now the entire town wants me dead. 10/10 emergent gameplay.",
+    "gameName": "The Elder Scrolls V: Skyrim",
+    "genre": "Action RPG",
+    "language": "en",
+    "difficulty": "medium",
+    "isActive": true
+  },
+  {
+    "reviewText": "Instructions unclear. Accidentally started a nuclear war with Gandhi. He's surprisingly aggressive for a pacifist. Just one more turn before bed... *sunrise happens*",
+    "gameName": "Civilization V",
+    "genre": "Turn-Based Strategy",
+    "language": "en",
+    "difficulty": "medium",
+    "isActive": true
+  },
+  {
+    "reviewText": "I've never felt more stressed organizing rectangles in my entire life. But when you get that perfect clear, *chef's kiss*. The music slaps too.",
+    "gameName": "Tetris",
+    "genre": "Puzzle",
+    "language": "en",
+    "difficulty": "easy",
+    "isActive": true
+  },
+  {
+    "reviewText": "My space program's motto: 'Moar Boosters!' I've sent more brave Kerbals to their doom than I'd like to admit. But hey, we made it to the Mun eventually!",
+    "gameName": "Kerbal Space Program",
+    "genre": "Simulation",
+    "language": "en",
+    "difficulty": "hard",
+    "isActive": true
+  },
+  {
+    "reviewText": "This cake better be worth it. I've been insulted by a robot for 6 hours straight and I'm starting to develop feelings for my companion cube. The cake was a lie.",
+    "gameName": "Portal",
+    "genre": "Puzzle Platformer",
+    "language": "en",
+    "difficulty": "medium",
+    "isActive": true
+  },
+  {
+    "reviewText": "WAR. WAR NEVER CHANGES. But my settlements always need my help. Preston, please, I'm trying to explore here. No, I don't want to help another settlement.",
+    "gameName": "Fallout 4",
+    "genre": "Action RPG",
+    "language": "en",
+    "difficulty": "medium",
+    "isActive": true
+  },
+  {
+    "reviewText": "I punch tree. I get wood. I make pickaxe. I mine stone. 300 hours later I have a castle and I still haven't beaten the game. 10/10 would punch tree again.",
+    "gameName": "Minecraft",
+    "genre": "Sandbox",
+    "language": "en",
+    "difficulty": "easy",
+    "isActive": true
+  },
+  {
+    "reviewText": "Psychology horror about depression, anxiety, and... wait, this is supposed to be a cute dating sim? *PTSD intensifies* Just Monika. Just Monika. JUST MONIKA.",
+    "gameName": "Doki Doki Literature Club",
+    "genre": "Visual Novel Horror",
+    "language": "en",
+    "difficulty": "medium",
+    "isActive": true
+  }
+]
+
+

@@ -180,7 +180,7 @@ const Profile: React.FC = () => {
           <p className="text-gray-400 text-center py-8">No games played yet</p>
         ) : (
           <div className="space-y-4">
-            {scoreHistory.map((score, index) => (
+            {scoreHistory.map((score: ScoreHistory, index: number) => (
               <motion.div
                 key={score._id}
                 initial={{ opacity: 0, x: -20 }}

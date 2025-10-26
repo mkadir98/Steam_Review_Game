@@ -41,7 +41,7 @@ const DailyChallenge: React.FC = () => {
       setHasCompleted(response.data.hasCompleted);
       
       if (response.data.hasCompleted) {
-        toast.info('You have already completed today\'s challenge!');
+        toast('You have already completed today\'s challenge!', { icon: 'ℹ️' });
         setShowLeaderboard(true);
       } else {
         // Start the game if not completed

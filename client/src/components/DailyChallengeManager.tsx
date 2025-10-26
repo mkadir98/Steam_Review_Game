@@ -71,7 +71,7 @@ const DailyChallengeManager: React.FC = () => {
   const fetchAllReviews = async () => {
     try {
       const response = await api.get('/admin/reviews?limit=100');
-      setAllReviews(response.data.reviews.filter((r: Review) => r.isActive));
+      setAllReviews(response.data.reviews.filter((r: any) => r.isActive !== false));
     } catch (error) {
       console.error('Error fetching reviews:', error);
     }

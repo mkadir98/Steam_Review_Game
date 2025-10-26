@@ -50,7 +50,7 @@ const FreePlay: React.FC = () => {
       if (count === 0) {
         toast.error(`⚠️ No reviews available in this language yet! Please switch to English 🇬🇧`, { duration: 6000 });
       } else if (count <= 5) {
-        toast.info(`ℹ️ Only ${count} game${count > 1 ? 's' : ''} available in this language. Complete them all!`, { duration: 5000 });
+        toast(`ℹ️ Only ${count} game${count > 1 ? 's' : ''} available in this language. Complete them all!`, { duration: 5000 });
       }
     }
   };

@@ -1,7 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const multer = require('multer');
-const path = require('path');
 const {
   getAllReviews,
   getReview,
@@ -21,38 +19,8 @@ const {
 const authMiddleware = require('../middleware/authMiddleware');
 const adminMiddleware = require('../middleware/adminMiddleware');
 
-// Configure multer for file uploads
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, path.join(__dirname, '../uploads/reviews'));
-  },
-  filename: function (req, file, cb) {
-    // Create unique filename with timestamp
-    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
-    cb(null, 'review-' + uniqueSuffix + path.extname(file.originalname));
-  }
-});
-
-// File filter to accept only images
-const fileFilter = (req, file, cb) => {
-  const allowedTypes = /jpeg|jpg|png|webp/;
-  const extname = allowedTypes.test(path.extname(file.originalname).toLowerCase());
-  const mimetype = allowedTypes.test(file.mimetype);
-
-  if (extname && mimetype) {
-    cb(null, true);
-  } else {
-    cb(new Error('Only image files (JPEG, JPG, PNG, WebP) are allowed!'));
-  }
-};
-
-const upload = multer({
-  storage: storage,
-  fileFilter: fileFilter,
-  limits: {
-    fileSize: 10 * 1024 * 1024 // 10MB limit (increased from 5MB)
-  }
-});
+// Cloudinary configuration
+const { upload } = require('../config/cloudinary');
 
 // All routes require auth and admin privileges
 router.use(authMiddleware, adminMiddleware);
@@ -61,20 +29,39 @@ router.use(authMiddleware, adminMiddleware);
 router.get('/reviews/stats', getReviewStats);
 
 // @route   POST /api/admin/reviews/upload-image
-// @desc    Upload a single review image
-router.post('/reviews/upload-image', upload.single('image'), (req, res) => {
+// @desc    Upload a single review image to Cloudinary
+router.post('/reviews/upload-image', upload.single('image'), async (req, res) => {
   try {
     if (!req.file) {
       return res.status(400).json({ message: 'No file uploaded' });
     }
 
-    // Return the relative path to be stored in the database
-    const imagePath = `/uploads/reviews/${req.file.filename}`;
-    
+    const { cloudinary } = require('../config/cloudinary');
+
+    // Upload buffer to Cloudinary
+    const uploadResult = await new Promise((resolve, reject) => {
+      const uploadStream = cloudinary.uploader.upload_stream(
+        {
+          folder: 'steam-reviews',
+          transformation: [
+            { width: 1920, height: 1080, crop: 'limit' },
+            { quality: 'auto' },
+            { fetch_format: 'auto' }
+          ]
+        },
+        (error, result) => {
+          if (error) reject(error);
+          else resolve(result);
+        }
+      );
+      uploadStream.end(req.file.buffer);
+    });
+
     res.json({ 
       success: true,
-      imagePath: imagePath,
-      filename: req.file.filename
+      imagePath: uploadResult.secure_url,
+      cloudinaryId: uploadResult.public_id,
+      url: uploadResult.secure_url
     });
   } catch (error) {
     console.error('Error uploading image:', error);

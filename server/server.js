@@ -10,6 +10,9 @@ require('dotenv').config();
 const app = express();
 const server = http.createServer(app);
 
+// Trust proxy - required for Render, Railway, Heroku, etc.
+app.set('trust proxy', 1);
+
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

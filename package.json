@@ -8,7 +8,7 @@
     "server": "cd server && npm run dev",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "install-all": "npm install && cd client && npm install && cd ../server && npm install",
-    "build": "cd client && npm install --legacy-peer-deps && npm run build",
+    "build": "cd client && npm install --legacy-peer-deps --production=false && npm run build",
     "start": "cd server && npm install && npm start",
     "railway:build": "npm run build",
     "railway:start": "cd server && npm start"
